@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{008745ED-89A8-4276-B141-C7DD74820DCC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MEDICASOFT_WIN.My.MyApplication</StartupObject>
+    <RootNamespace>MEDICASOFT_WIN</RootNamespace>
+    <AssemblyName>MEDICASOFT_WIN</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MEDICASOFT_WIN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MEDICASOFT_WIN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APLICACION\CitaServicio.vb" />
+    <Compile Include="APLICACION\HorarioAtencionServicio.vb" />
+    <Compile Include="APLICACION\OdontologoServicio.vb" />
+    <Compile Include="APLICACION\PacienteServicio.vb" />
+    <Compile Include="DOMINIO\cCITA.vb" />
+    <Compile Include="DOMINIO\cHORARIOATENCION.vb" />
+    <Compile Include="DOMINIO\CPACIENTE.vb" />
+    <Compile Include="DOMINIO\cODONTOLOGO.vb" />
+    <Compile Include="PERSISTENCIA\CitaADO.vb" />
+    <Compile Include="PERSISTENCIA\Conexion.vb" />
+    <Compile Include="PERSISTENCIA\HorarioAtencionADO1.vb" />
+    <Compile Include="PERSISTENCIA\LoginUsuario.vb" />
+    <Compile Include="PERSISTENCIA\OdontologoADO.vb" />
+    <Compile Include="PERSISTENCIA\PacienteADO.vb" />
+    <Compile Include="PRESENTACION\LOGIN.Designer.vb">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\LOGIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\MENU.Designer.vb">
+      <DependentUpon>MENU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\MENU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANACITA.Designer.vb">
+      <DependentUpon>VENTANACITA.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANACITA.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANAHORARIO.Designer.vb">
+      <DependentUpon>VENTANAHORARIO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANAHORARIO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTACITAS.Designer.vb">
+      <DependentUpon>VENTANALISTACITAS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTACITAS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTAHORARIOS.Designer.vb">
+      <DependentUpon>VENTANALISTAHORARIOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTAHORARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTAODONTOLOGO.Designer.vb">
+      <DependentUpon>VENTANALISTAODONTOLOGO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTAODONTOLOGO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTAPACIENTES.Designer.vb">
+      <DependentUpon>VENTANALISTAPACIENTES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANALISTAPACIENTES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANAODONTOLOGO.Designer.vb">
+      <DependentUpon>VENTANAODONTOLOGO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANAODONTOLOGO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANAPACIENTE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRESENTACION\VENTANAPACIENTE.Designer.vb">
+      <DependentUpon>VENTANAPACIENTE.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\LOGIN.resx">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\MENU.resx">
+      <DependentUpon>MENU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANACITA.resx">
+      <DependentUpon>VENTANACITA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANAHORARIO.resx">
+      <DependentUpon>VENTANAHORARIO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANALISTACITAS.resx">
+      <DependentUpon>VENTANALISTACITAS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANALISTAHORARIOS.resx">
+      <DependentUpon>VENTANALISTAHORARIOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANALISTAODONTOLOGO.resx">
+      <DependentUpon>VENTANALISTAODONTOLOGO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANALISTAPACIENTES.resx">
+      <DependentUpon>VENTANALISTAPACIENTES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANAODONTOLOGO.resx">
+      <DependentUpon>VENTANAODONTOLOGO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION\VENTANAPACIENTE.resx">
+      <DependentUpon>VENTANAPACIENTE.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Resources\CERRAR_sESION.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Resources\iconopersona.png" />
+    <None Include="My Project\Resources\LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\candado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personas_candado.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONTRASEÑA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDO FRM PRINCIPAL1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ÁREA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FONDO.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ejem.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
